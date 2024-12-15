@@ -1,0 +1,44 @@
+name: Daily
+on:
+  schedule:
+    - cron: "0 22 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  run-commands:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Download JSON and save response
+        env:
+          JSON_URL: "https://raw.githubusercontent.com/fa0311/TwitterInternalAPIDocument/refs/heads/develop/docs/json/ScriptLoadJson.json"
+        run: curl -s $JSON_URL | jq -r '.["ondemand.s"]' | xargs curl -s -o source/a.js
+
+      - name: Run deobfuscation scripts
+        run: npm run run2
+
+      - name: Commit
+        continue-on-error: true
+        run: |
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "GitHub Action"
+          git add .
+          git commit -m "Update"
+          git push origin main
