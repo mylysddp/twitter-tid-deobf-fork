@@ -1,2 +1,7 @@
-# twitter-tid-deobf
-Deobfuscation for the Twitter X-Client-Transaction-Id header. For part 1 of my blog at [https://antibot.blog](https://antibot.blog/twitter)
+# twitter-tid-deobf-fork
+
+## Clean Up Only
+
+```shell
+npm --prefix base run run
+```

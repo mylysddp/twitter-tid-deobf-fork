@@ -19,7 +19,8 @@ let beautify_opts = {
   minified: false,
   concise: false,
 }
-const script = readFileSync('./source/a.js', 'utf-8');
+const [_,__,inputPath,outputPath] = process.argv;
+const script = readFileSync(inputPath, "utf-8");
 
 const AST = parser.parse(script, {})
 
@@ -557,4 +558,4 @@ writeFileSync("output.log", output, 'utf-8')
 
 const final_code = generate(AST, beautify_opts).code;
 
-fs.writeFileSync('./output/a.js', final_code);
+fs.writeFileSync(outputPath, final_code);
