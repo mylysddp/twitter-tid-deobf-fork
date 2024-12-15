@@ -1,22 +1,29 @@
 # twitter-tid-deobf-fork
 
-Run twitter-tid-deobf
+This repository performs deobfuscation of the `X-Client-Transaction-Id` header used on Twitter.  
+It is automatically updated daily at 22:00 UTC.
 
-```shell
-npm --prefix base install
-npm --prefix base run run
-```
+It is a fork of [https://github.com/obfio/twitter-tid-deobf](https://github.com/obfio/twitter-tid-deobf).
+
+## Usage
 
 Update `source/a.js`
 
 ```shell
-JSON_URL="https://raw.githubusercontent.com/fa0311/TwitterInternalAPIDocument/refs/heads/master/docs/json/ScriptLoadJson.json"
+JSON_URL="https://raw.githubusercontent.com/fa0311/TwitterInternalAPIDocument/refs/heads/develop/docs/json/ScriptLoadJson.json"
 curl -s $JSON_URL | jq -r '.["ondemand.s"]' | xargs curl -s -o response.html
 ```
 
-Run twitter-tid-deobf-fork
+Run
 
 ```shell
 npm install
 npm run run2
+```
+
+Run base `obfio/twitter-tid-deobf`
+
+```shell
+npm --prefix base install
+npm --prefix base run run
 ```
