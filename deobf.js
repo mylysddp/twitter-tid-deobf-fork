@@ -553,7 +553,7 @@ traverse(AST, objDeobfMemberExpr)
 traverse(AST, cleanupDeadCode)
 
 
-writeFileSync("output.txt", output, 'utf-8')
+writeFileSync("output.log", output, 'utf-8')
 
 const final_code = generate(AST, beautify_opts).code;
 
