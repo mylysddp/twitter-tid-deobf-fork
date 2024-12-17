@@ -137,9 +137,74 @@ const evaluateCallExpressions = {
   },
 };
 
+const deadCodeElimination = {
+  ReturnStatement(path) {
+    let currentPath = path;
+    do {
+      const siblings = currentPath.getAllNextSiblings();
+      siblings.forEach((sibling) => sibling.remove());
+      currentPath = currentPath.parentPath;
+    } while (currentPath && t.isBlockStatement(currentPath.node));
+  },
+};
+
+const inlineArrayDestructuring = {
+  VariableDeclarator(path) {
+    const node = path.node;
+    if (t.isArrayExpression(node.init) && t.isArrayPattern(node.id)) {
+      const elements = node.init.elements;
+      const names = node.id.elements;
+      const newDeclarations = [];
+
+      elements.forEach((element, index) => {
+        const name = names[index];
+        if (name && element) {
+          newDeclarations.push(
+            t.variableDeclarator(t.identifier(name.name), element)
+          );
+        }
+      });
+      if (newDeclarations.length > 0) {
+        path.replaceWithMultiple(newDeclarations);
+      }
+    }
+  },
+};
+
+const inlineObjectDestructuring = {
+  VariableDeclaration(path) {
+    const node = path.node;
+    if (node.declarations.length > 1) {
+      const newDeclarations = node.declarations.map((declarator) =>
+        t.variableDeclaration(node.kind, [declarator])
+      );
+      path.replaceWithMultiple(newDeclarations);
+    }
+  },
+};
+
+const removeUnusedVariables = {
+  Program(path) {
+    path.traverse({
+      VariableDeclarator(variablePath) {
+        const binding = variablePath.scope.getBinding(
+          variablePath.node.id.name
+        );
+        if (binding && !binding.referenced) {
+          variablePath.remove();
+        }
+      },
+    });
+  },
+};
+
 traverse(AST, inlineDestructuredVariables);
 traverse(AST, evaluateMemberExpressions);
 traverse(AST, evaluateCallExpressions);
+traverse(AST, deadCodeElimination);
+traverse(AST, inlineArrayDestructuring);
+traverse(AST, inlineObjectDestructuring);
+traverse(AST, removeUnusedVariables);
 
 const final_code = generate(AST, beautify_opts).code;
 
