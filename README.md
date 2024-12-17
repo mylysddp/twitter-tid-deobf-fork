@@ -5,6 +5,8 @@ It is automatically updated daily at 22:00 UTC.
 
 It is a fork of [https://github.com/obfio/twitter-tid-deobf](https://github.com/obfio/twitter-tid-deobf).
 
+Output: https://github.com/fa0311/twitter-tid-deobf-fork/blob/main/output/b.js
+
 ## Usage
 
 Update `source/a.js`
