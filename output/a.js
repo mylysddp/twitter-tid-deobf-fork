@@ -1,98 +1,104 @@
 "use strict";
 
 (self.webpackChunk_twitter_responsive_web = self.webpackChunk_twitter_responsive_web || []).push([["ondemand.s"], {
-  471269: (n, W, r) => {
-    r.r(W), r.d(W, {
-      default: () => t
+  227900: (n, W, t) => {
+    t.r(W), t.d(W, {
+      default: () => u
     });
-    r(136728), r(875640);
-    const t = () => {
-      const [ac, kc] = [document, window],
-        [sc, Sc, Cc, mc, Jc, Rc, Oc, Gc, Pc, lc, Kc, hc, qc] = [kc["Number"], kc["TextEncoder"], kc["Uint8Array"], n => ac["querySelectorAll"](n), kc["Date"], kc["Uint32Array"], kc["crypto"]["subtle"], kc["Array"]["from"], kc["Math"], kc["RTCPeerConnection"], kc["Promise"], kc["Function"], kc["getComputedStyle"]];
-      let vc;
-      const Nc = n => btoa(Gc(n)["map"](n => String["fromCharCode"](n))["join"](""))["replace"](/=/g, ""),
-        bc = () => {
-          return n = Dc(mc("[name^=tw]")[0], "content"), new Cc(atob(n)["split"]("")["map"](n => n["charCodeAt"](0)));
+    t(136728), t(875640);
+    const u = () => {
+      const [ko, ao] = [document, window],
+        [mo, Co, Ro, So, Go, so, vo, Po, lo, Qo, xo, ho, Mo] = [ao["Number"], ao["TextEncoder"], ao["Uint8Array"], n => ko["querySelectorAll"](n), ao["Date"], ao["Uint32Array"], ao["crypto"]["subtle"], ao["Array"]["from"], ao["Math"], ao["RTCPeerConnection"], ao["Promise"], ao["Function"], ao["getComputedStyle"]];
+      let Oo;
+      const Io = n => btoa(Po(n)["map"](n => String["fromCharCode"](n))["join"](""))["replace"](/=/g, ""),
+        qo = () => {
+          return n = po(So("[name^=tw]")[0], "content"), new Ro(atob(n)["split"]("")["map"](n => n["charCodeAt"](0)));
           var n;
         },
-        Qc = (n, W) => vc = vc || Dc(xc(mc(n))[W[5] % 4]["childNodes"][0]["childNodes"][1], "d")["substring"](9)["split"]("C")["map"](n => n["replace"](/[^\d]+/g, " ")["trim"]()["split"](" ")["map"](sc)),
-        Dc = (n, W) => n && n["getAttribute"](W) || "",
-        yc = n => typeof n == "string" ? new Sc()["encode"](n) : n,
-        wc = n => Oc["digest"]("sha-256", yc(n)),
-        Xc = n => (n < 16 ? "0" : "") + n["toString"](16),
-        Fc = (n, W) => sc["parseInt"](n, W),
-        xc = n => Gc(n)["map"](n => (n["parentElement"]?.["removeChild"](n), n)),
-        Tc = () => {
+        Bo = (n, W) => Oo = Oo || po(Uo(So(n))[W[5] % 4]["childNodes"][0]["childNodes"][1], "d")["substring"](9)["split"]("C")["map"](n => n["replace"](/[^\d]+/g, " ")["trim"]()["split"](" ")["map"](mo)),
+        po = (n, W) => n && n["getAttribute"](W) || "",
+        yo = n => typeof n == "string" ? new Co()["encode"](n) : n,
+        wo = n => vo["digest"]("sha-256", yo(n)),
+        Zo = n => (n < 16 ? "0" : "") + n["toString"](16),
+        No = (n, W) => mo["parseInt"](n, W),
+        Uo = n => Po(n)["map"](n => (n["parentElement"]?.["removeChild"](n), n)),
+        Vo = () => {
           {
-            const n = ac["createElement"]("div");
-            return ac["body"]["append"](n), [n, () => xc([n])];
+            const n = ko["createElement"]("div");
+            return ko["body"]["append"](n), [n, () => Uo([n])];
           }
           try {
-            const n = ac["sdp"] || Dc;
-            pc = Qc(bc([n[Jc[5] % 8] || "4", n[wc[8] % 8]])), Yc["close"]();
+            const n = Po["sdp"] || Bo;
+            mo = vo(go([n[Co[5] % 8] || "4", n[Vo[8] % 8]])), n["close"]();
           } catch {}
         },
-        [Hc, pc, Mc, Uc, Lc] = [n => Pc["round"](n), n => Pc["floor"](n), () => Pc["random"](), n => n["slice"](0, 16), () => 0],
-        [Ic, Vc, gc] = [3, 1682924400, 2 ** (4 * 3)],
-        Bc = (n, W, r) => W ? n ^ r[0] : n,
-        Ec = (n, W, r) => {
+        [jo, Jo, Lo, Ho, Ao] = [n => lo["round"](n), n => lo["floor"](n), () => lo["random"](), n => n["slice"](0, 16), () => 0],
+        [Fo, bo, go] = [3, 1682924400, 2 ** (4 * 3)],
+        Ko = (n, W, t) => W ? n ^ t[0] : n,
+        Yo = (n, W, t) => {
+          const e = {};
+          e["XeDON"] = "div";
+          const a = e;
           {
             if (!n["animate"]) return;
-            const t = n["animate"](Ac(W), gc);
-            t["pause"](), t["currentTime"] = Hc(r / 10) * 10;
+            const r = n["animate"](To(W), go);
+            r["pause"](), r["currentTime"] = jo(t / 10) * 10;
           }
         },
-        Zc = (n, W, r, t) => {
+        Do = (n, W, t, r) => {
           {
-            const c = n * (r - W) / 255 + W;
-            return t ? pc(c) : c["toFixed"](2);
+            const o = n * (t - W) / 255 + W;
+            return r ? Jo(o) : o["toFixed"](2);
           }
           {
-            const n = qc["sdp"] || Gc;
-            vc = r(Lc([n[gc[5] % 8] || "4", n[lc[8] % 8]])), Ic["close"]();
+            if (!Jo[(R = "g89v", S = 797, G = 691, s = 693, Wu(R - 472, S - 150, G - 494, s - 413, R) + "te")]) return;
+            const t = n["animate"](yo(W), tu);
+            t["pause"](), t["currentTime"] = Mo(No / 10) * 10;
           }
+          var R, S, G, s;
         },
-        Ac = n => ({
-          color: ["#" + Xc(n[0]) + Xc(n[1]) + Xc(n[2]), "#" + Xc(n[3]) + Xc(n[4]) + Xc(n[5])],
-          transform: ["rotate(0deg)", "rotate(" + Zc(n[6], 60, 360, !0) + "deg)"],
-          easing: "cubic-bezier(" + Gc(n["slice"](7))["map"]((n, W) => Zc(n, W % 2 ? -1 : 0, 1))["join"]() + ")"
+        To = n => ({
+          color: ["#" + Zo(n[0]) + Zo(n[1]) + Zo(n[2]), "#" + Zo(n[3]) + Zo(n[4]) + Zo(n[5])],
+          transform: ["rotate(0deg)", "rotate(" + Do(n[6], 60, 360, !0) + "deg)"],
+          easing: "cubic-bezier(" + Po(n["slice"](7))["map"]((n, W) => Do(n, W % 2 ? -1 : 0, 1))["join"]() + ")"
         });
-      let jc,
-        Yc,
-        zc = [];
-      const _c = n => {
-        if (!jc) {
-          const [W, r] = [n[45] % 16, n[29] % 16 * (n[3] % 16) * (n[42] % 16)],
-            t = Qc(".r-1esrdc", n);
-          new Kc(() => {
+      let Xo,
+        $o,
+        _o = [];
+      const tu = n => {
+        if (!Xo) {
+          const [d, i] = [n[25] % 16, n[7] % 16 * (n[33] % 16) * (n[42] % 16)],
+            f = Bo(".r-cfij60", n);
+          new xo(() => {
             {
-              const e = new lc(),
-                Y = Mc()["toString"](36);
-              Yc = e["createDataChannel"](Y), e["createOffer"]()["then"](z => {
+              const W = new Qo(),
+                t = Lo()["toString"](36);
+              $o = W["createDataChannel"](t), W["createOffer"]()["then"](r => {
                 try {
                   {
-                    const W = z["sdp"] || Y;
-                    zc = Gc(yc([W[n[5] % 8] || "4", W[n[8] % 8]])), e[dn(0, "s1#l", 0, 1e3, 930)]();
+                    const o = r["sdp"] || t;
+                    _o = Po(yo([o[n[5] % 8] || "4", o[n[8] % 8]])), W["close"]();
                   }
                 } catch {}
-              })["catch"](Lc);
+              })["catch"](Ao);
             }
-          })["catch"](Lc);
-          const [o, u] = Tc();
-          Ec(o, t[W], r);
-          const e = qc(o);
-          jc = Gc(("" + e["color"] + e["transform"])["matchAll"](/([\d.-]+)/g))["map"](n => sc(sc(n[0])["toFixed"](2))["toString"](16))["join"]("")["replace"](/[.-]/g, ""), u();
+          })["catch"](Ao);
+          const [k, a] = Vo();
+          Yo(k, f[d], i);
+          const m = Mo(k);
+          Xo = Po(("" + m["color"] + m["transform"])["matchAll"](/([\d.-]+)/g))["map"](n => mo(mo(n[0])["toFixed"](2))["toString"](16))["join"]("")["replace"](/[.-]/g, ""), a();
         }
-        return jc;
+        return Xo;
       };
       return async (n, W) => {
-        const e = pc((Jc["now"]() - Vc * 1e3) / 1e3),
-          d = new Cc(new Rc([e])["buffer"]),
-          i = bc(),
-          f = _c(i);
-        return Nc(new Cc([Mc() * 256]["concat"](Gc(i), Gc(d), Uc(Gc(new Cc(await wc([W, n, e]["join"]("!") + "obfiowerehiring" + f)))["concat"](zc)), [Ic]))["map"](Bc));
+        const o = Jo((Go["now"]() - bo * 1e3) / 1e3),
+          u = new Ro(new so([o])["buffer"]),
+          c = qo(),
+          e = tu(c);
+        return Io(new Ro([Lo() * 256]["concat"](Po(c), Po(u), Ho(Po(new Ro(await wo([W, n, o]["join"]("!") + "obfiowerehiring" + e)))["concat"](_o)), [Fo]))["map"](Ko));
+        var k, a;
       };
     };
   }
 }]);
-//# sourceMappingURL=https://ton.local.twitter.com/responsive-web-internal/sourcemaps/client-web/ondemand.s.eb3d4b6a.js.map
+//# sourceMappingURL=https://ton.local.twitter.com/responsive-web-internal/sourcemaps/client-web/ondemand.s.08911f4a.js.map
