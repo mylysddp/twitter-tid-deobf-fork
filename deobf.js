@@ -434,12 +434,28 @@ const deobfStrings = {
       }
       code += generate(binding.path.node).code + "\n";
       path.scope.crawl();
-      binding = binding.path.scope.getBinding(
-        binding.path.node.body.body[0].argument.callee.name
-      );
+      for (const body of binding.path.node.body.body) {
+        if (body.type == "ReturnStatement") {
+          if (body.argument.type == "CallExpression") {
+            binding = binding.path.scope.getBinding(body.argument.callee.name);
+          } else if (body.argument.type == "SequenceExpression") {
+            binding = undefined;
+          }
+        } else if (body.type == "VariableDeclaration") {
+          path.scope.crawl();
+          binding.scope.crawl();
+          binding = binding.path.scope.getBinding(
+            body.declarations[0].init.callee.name
+          );
+          code += generate(binding.path.node).code + "\n";
+          binding = undefined;
+        }
+      }
     }
     // ! now we should have all the code we need
-    path.replaceWith(t.valueToNode(vm.runInContext(code, decryptFuncCtx)));
+    try {
+      path.replaceWith(t.valueToNode(vm.runInContext(code, decryptFuncCtx)));
+    } catch (e) {}
   },
 };
 
