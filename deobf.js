@@ -556,6 +556,9 @@ const objDeobfMemberExpr = {
       key = node.property.value;
     }
     let value = map[key];
+    if (value === undefined) {
+      return;
+    }
     if (value.type == "StringLiteral") {
       path.replaceWith(value);
       return;
@@ -593,6 +596,9 @@ const objDeobfMemberExpr = {
       key = node.callee.property.value;
     }
     let value = map[key];
+    if (value === undefined) {
+      return;
+    }
     // ! replace functions
     let retNode = value.body.body[0].argument;
     // ! call expression
@@ -635,7 +641,6 @@ const objDeobfMemberExpr = {
 function evalValue(left, right, op) {
   switch (op) {
     case "===":
-      return left == right;
     case "!==":
       return left != right;
   }
