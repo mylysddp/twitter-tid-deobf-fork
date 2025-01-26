@@ -21,7 +21,12 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
+
+      - name: Commit Setup
+        run: |
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "GitHub Action"
 
       - name: Install dependencies
         run: npm install
@@ -31,43 +36,19 @@ jobs:
           JSON_URL: "https://raw.githubusercontent.com/fa0311/TwitterInternalAPIDocument/refs/heads/develop/docs/json/ScriptLoadJson.json"
         run: curl -s $JSON_URL | jq -r '.["ondemand.s"]' | xargs curl -s -o source/a.js
 
-      - name: Commit
+      - name: Commit Setup
         continue-on-error: true
         run: |
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --global user.name "GitHub Action"
           git add .
-          git commit -m "Update"
+          git commit -m "Update source file"
           git push origin main
-
-  run-commands2:
-    runs-on: ubuntu-latest
-    needs: run-commands1
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: git update
-        run: |
-          git fetch --all
-          git pull
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-
-      - name: Install dependencies
-        run: npm install
 
       - name: Run deobfuscation scripts
         run: npm run run2
 
-      - name: Commit
+      - name: Commit Setup
         continue-on-error: true
         run: |
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --global user.name "GitHub Action"
           git add .
-          git commit -m "Update"
+          git commit -m "Update deobfuscation"
           git push origin main
