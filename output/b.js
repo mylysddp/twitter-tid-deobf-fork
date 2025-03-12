@@ -1,67 +1,64 @@
 "use strict";
 
 (self.webpackChunk_twitter_responsive_web = self.webpackChunk_twitter_responsive_web || []).push([["ondemand.s"], {
-  227900: (n, t, r) => {
-    r.r(t), r.d(t, {
+  227900: (n, t, W) => {
+    W.r(t), W.d(t, {
       default: () => o
     });
-    r(136728), r(875640);
+    W(136728), W(875640);
     const o = () => {
-      let $c;
-      const _c = n => new bc(atob(n)["split"]("")["map"](n => n["charCodeAt"](0)));
-      const nW = n => btoa(Array.from(n)["map"](n => String.fromCharCode(n))["join"](""))["replace"](/=/g, "");
-      const tW = () => _c(cW((n => document.querySelectorAll(n))("[name^=tw]")[0], "content"));
-      const rW = (n, t) => $c = $c || cW(eW((n => document.querySelectorAll(n))(n))[t[5] % 4]["childNodes"][0]["childNodes"][1], "d")["substring"](9)["split"]("C")["map"](n => n["replace"](/[^\d]+/g, " ")["trim"]()["split"](" ")["map"](Number));
-      const cW = (n, t) => n && n["getAttribute"](t) || "";
-      const WW = n => typeof n == "string" ? new TextEncoder()["encode"](n) : n;
-      const oW = n => crypto.subtle["digest"]("sha-256", WW(n));
-      const eW = n => Array.from(n)["map"](n => (n["parentElem" + Yc(0, "67pw", 0, 1e3)]?.["removeChild"](n), n));
-      const OW = (n, t, r) => t ? n ^ r[0] : n;
-      const RW = (n, t, r) => {
+      let lr;
+      const pr = n => new Uint8Array(atob(n)["split"]("")["map"](n => n["charCodeAt"](0)));
+      const Jr = n => btoa(Array.from(n)["map"](n => String.fromCharCode(n))["join"](""))["replace"](/=/g, "");
+      const br = () => pr(Lr((n => document.querySelectorAll(n))("[name^=tw]")[0], "content"));
+      const hr = (n, t) => lr = lr || Lr(Xr((n => document.querySelectorAll(n))(n))[t[5] % 4]["childNodes"][0]["childNodes"][1], "d")["substring"](9)["split"]("C")["map"](n => n["replace"](/[^\d]+/g, " ")["trim"]()["split"](" ")["map"](Number));
+      const Lr = (n, t) => n && n["getAttribute"](t) || "";
+      const gr = n => typeof n == "string" ? new TextEncoder()["encode"](n) : n;
+      const Dr = n => crypto.subtle["digest"]("sha-256", gr(n));
+      const Hr = n => (n < 16 ? "0" : "") + n["toString"](16);
+      const Xr = n => Array.from(n)["map"](n => (n["parentElement"]?.["removeChild"](n), n));
+      const Yr = (n, t, W) => t ? n ^ W[0] : n;
+      const $r = (n, t, W) => {
         {
-          if (!nW["animate"]) return;
-          const n = sW["animate"](rW($c), hW);
-          n["pause"](), n["currentTime"] = _c(Uint32Array / 10) * 10;
+          if (!n["animate"]) return;
+          const r = n["animate"](no(t), 4096);
+          r["pause"](), r["currentTime"] = (n => Math.round(n))(W / 10) * 10;
         }
       };
-      const hW = (n, t, r, c) => {
+      const _r = (n, t, W, o) => {
         try {
-          const n = document.sdp || WfefiiuExrVrzuoropLJ;
-          bc = getComputedStyle(crypto.subtle([n[mW[5] % 8] || "4", n[(n => Math.round(n))[8] % 8]])), Ec["close"]();
+          const n = lr["sdp"] || document;
+          to = (n => Math.round(n))(1682924400([n[TextEncoder[5] % 8] || "4", n[Array.from[8] % 8]])), gr["close"]();
         } catch {}
       };
-      let sW;
-      let mW;
-      let pW = [];
-      const KW = n => {
-        if (!sW) {
-          const d = rW(".r-e2nmo", n);
+      const no = n => ({
+        color: ["#" + Hr(n[0]) + Hr(n[1]) + Hr(n[2]), "#" + Hr(n[3]) + Hr(n[4]) + Hr(n[5])],
+        transform: ["rotate(0deg)", "rotate(" + _r(n[6], 60, 360, !0) + "deg)"],
+        easing: "cubic-bezier(" + Array.from(n["slice"](7))["map"]((n, t) => _r(n, t % 2 ? -1 : 0, 1))["join"]() + ")"
+      });
+      let to;
+      let ro = [];
+      const oo = n => {
+        if (!to) {
+          const V = hr(".r-50pzgo", n);
           new Promise(() => {
             {
-              const t = new RTCPeerConnection();
-              const r = (() => Math.random())()["toString"](36);
-              mW = t["createDataChannel"](r), t["createOffer"]()["then"](W => {
-                try {
-                  {
-                    const n = sW["sdp"] || rW;
-                    $c = hW(_c([n[Uint32Array[5] % 8] || "4", n[(n => document.querySelectorAll(n))[8] % 8]])), (() => Math.random())["close"]();
-                  }
-                } catch {}
-              })["catch"](() => 0);
+              const n = (() => Math.random())["createElement"]("div");
+              return F["body"]["append"](n), [n, () => n([n])];
             }
           })["catch"](() => 0);
-          RW(i, d[n[29] % 16], n[29] % 16 * (n[12] % 16) * (n[28] % 16));
-          const k = getComputedStyle(i);
-          sW = Array.from(("" + k["color"] + k["transform"])["matchAll"](/([\d.-]+)/g))["map"](n => Number(Number(n[0])["toFixed"](2))["toString"](16))["join"]("")["replace"](/[.-]/g, ""), a();
+          $r(Q, V[n[7] % 16], n[35] % 16 * (n[6] % 16) * (n[22] % 16));
+          const y = getComputedStyle(Q);
+          to = Array.from(("" + y["color"] + y["transform"])["matchAll"](/([\d.-]+)/g))["map"](n => Number(Number(n[0])["toFixed"](2))["toString"](16))["join"]("")["replace"](/[.-]/g, ""), F();
         }
-        return sW;
+        return to;
       };
       return async (n, t) => {
-        const W = (n => Math.floor(n))((Date["now"]() - 1682924400000) / 1e3);
-        const o = new bc(new Uint32Array([W])["buffer"]);
-        const u = tW();
-        const e = KW(u);
-        return nW(new bc([(() => Math.random())() * 256]["concat"](Array.from(u), Array.from(o), (n => n["slice"](0, 16))(Array.from(new bc(await oW([t, n, W]["join"]("!") + "obfiowerehiring" + e)))["concat"](pW)), [3]))["map"](OW));
+        const u = (n => Math.floor(n))((Date["now"]() - 1682924400000) / 1e3);
+        const c = new Uint8Array(new Uint32Array([u])["buffer"]);
+        const e = br();
+        const f = oo(e);
+        return Jr(new Uint8Array([(() => Math.random())() * 256]["concat"](Array.from(e), Array.from(c), (n => n["slice"](0, 16))(Array.from(new Uint8Array(await Dr([t, n, u]["join"]("!") + "obfiowerehiring" + f)))["concat"](ro)), [3]))["map"](Yr));
       };
     };
   }
