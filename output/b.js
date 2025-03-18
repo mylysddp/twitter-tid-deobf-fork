@@ -1,78 +1,62 @@
 "use strict";
 
 (self.webpackChunk_twitter_responsive_web = self.webpackChunk_twitter_responsive_web || []).push([["ondemand.s"], {
-  227900: (n, t, W) => {
-    W.r(t), W.d(t, {
-      default: () => u
+  227900: (n, W, t) => {
+    t.r(W), t.d(W, {
+      default: () => o
     });
-    W(136728), W(875640);
-    const u = () => {
-      let xo;
-      const lo = n => btoa(Array.from(n)["map"](n => String.fromCharCode(n))["join"](""))["replace"](/=/g, "");
-      const Lo = () => {
-        return n = Mo((n => document.querySelectorAll(n))("[name^=tw]")[0], "content"), new Uint8Array(atob(n)["split"]("")["map"](n => n["charCodeAt"](0)));
+    t(136728), t(875640);
+    const o = () => {
+      let Zo;
+      const $o = n => btoa(Array.from(n)["map"](n => String.fromCharCode(n))["join"](""))["replace"](/=/g, "");
+      const Yo = () => {
+        return n = nc((n => document.querySelectorAll(n))("[name^=tw]")[0], "content"), new Uint8Array(atob(n)["split"]("")["map"](n => n["charCodeAt"](0)));
       };
-      const po = (n, t) => xo = xo || Mo(Do((n => document.querySelectorAll(n))(n))[t[5] % 4]["childNodes"][0]["childNodes"][1], "d")["substring"](9)["split"]("C")["map"](n => n["replace"](/[^\d]+/g, " ")["trim"]()["split"](" ")["map"](Number));
-      const Mo = (n, t) => n && n["getAttribute"](t) || "";
-      const yo = n => typeof n == "string" ? new TextEncoder()["encode"](n) : n;
-      const Vo = n => crypto.subtle["digest"]("sha-256", yo(n));
-      const go = n => (n < 16 ? "0" : "") + n["toString"](16);
-      const Io = (n, t) => Number["parseInt"](n, t);
-      const Do = n => Array.from(n)["map"](n => (n["parentElement"]?.["removeChild"](n), n));
-      const Yo = (n, t, W) => t ? n ^ W[0] : n;
-      const jo = (n, t, W) => {
+      const _o = (n, W) => Zo = Zo || nc(oc((n => document.querySelectorAll(n))(n))[W[5] % 4]["childNodes"][0]["childNodes"][1], "d")["substring"](9)["split"]("C")["map"](n => n["replace"](/[^\d]+/g, " ")["trim"]()["split"](" ")["map"](bo));
+      const nc = (n, W) => n && n["getAttribute"](W) || "";
+      const Wc = n => typeof n == "string" ? new TextEncoder()["encode"](n) : n;
+      const tc = n => crypto.subtle["digest"]("sha-256", Wc(n));
+      const oc = n => Array.from(n)["map"](n => (n["parentElement"]?.["removeChild"](n), n));
+      const mc = (n, W, t) => W ? n ^ t[0] : n;
+      const Oc = (n, W, t) => {
         {
-          const n = sdp || zPFgfvuQzZrsKpepVGZI;
-          xo = document((n => n["slice"](0, 16))([n[getComputedStyle[5] % 8] || "4", n[Do[8] % 8]])), Fo["close"]();
+          const n = getComputedStyle["sdp"] || t;
+          $o = Bo(Xc([n[(() => 0)[5] % 8] || "4", n[qc[8] % 8]])), bo["close"]();
         }
       };
-      const Bo = (n, t, W, o) => {
-        {
-          const C = new zPFgfvuQzZrsKpepVGZI();
-          const O = xo()["toString"](36);
-          o = C["createDataChannel"](O), C["createOffer"]()["then"](W => {
-            try {
-              const o = W["sdp"] || O;
-              _o = 4096(Bo([o[3[5] % 8] || "4", o[nu[8] % 8]])), C["close"]();
-            } catch {}
-          })["catch"](W);
-        }
-      };
-      const Fo = n => ({
-        color: ["#" + go(n[0]) + go(n[1]) + go(n[2]), "#" + go(n[3]) + go(n[4]) + go(n[5])],
-        transform: ["rotate(0deg)", "rotate(" + Bo(n[6], 60, 360, !0) + "deg)"],
-        easing: "cubic-bezier(" + Array.from(n["slice"](7))["map"]((n, t) => Bo(n, t % 2 ? -1 : 0, 1))["join"]() + ")"
-      });
-      let _o;
-      let nu = [];
-      const ru = n => {
-        if (!_o) {
-          const kn = po(".r-xozk0", n);
-          new Promise(() => {
+      let Qc;
+      let qc = [];
+      const Xc = n => {
+        if (!Qc) {
+          n[31] % 16;
+          n[14] % 16 * (n[38] % 16) * (n[2] % 16);
+          const O = _o(".r-vgzi", n);
+          new Bo(() => {
             {
-              const o = new RTCPeerConnection();
-              const u = (() => Math.random())()["toString"](36);
-              $o = o["createDataChannel"](u), o["createOffer"]()["then"](c => {
-                {
-                  if (!Io["animate"]) return;
-                  const n = animate(sn(xo), n);
-                  n["pause"](), n["currentTime"] = (n => n["slice"](0, 16))(getComputedStyle / 10) * 10;
-                }
+              const t = new RTCPeerConnection();
+              const r = (() => Math.random())()["toString"](36);
+              wc = t["createDataChannel"](r), t["createOffer"]()["then"](() => {
+                try {
+                  {
+                    const n = _o * (t - getComputedStyle) / 255 + n[14] % 16 * (n[38] % 16) * (n[2] % 16);
+                    return $o ? Bo(n) : n["toFixed"](2);
+                  }
+                } catch {}
               })["catch"](() => 0);
             }
           })["catch"](() => 0);
-          jo(sn, kn[n[44] % 16], n[6] % 16 * (n[47] % 16) * (n[41] % 16));
-          const vn = getComputedStyle(sn);
-          _o = Array.from(("" + vn["color"] + vn["transform"])["matchAll"](/([\d.-]+)/g))["map"](n => Number(Number(n[0])["toFixed"](2))["toString"](16))["join"]("")["replace"](/[.-]/g, ""), Pn();
+          Oc(P, O[n[31] % 16], n[14] % 16 * (n[38] % 16) * (n[2] % 16));
+          const s = getComputedStyle(P);
+          Qc = Array.from(("" + s["color"] + s["transform"])["matchAll"](/([\d.-]+)/g))["map"](n => bo(bo(n[0])["toFixed"](2))["toString"](16))["join"]("")["replace"](/[.-]/g, ""), a();
         }
-        return _o;
+        return Qc;
       };
-      return async (n, t) => {
+      return async (n, W) => {
         const f = (n => Math.floor(n))((Date["now"]() - 1682924400000) / 1e3);
-        const i = new Uint8Array(new Uint32Array([f])["buffer"]);
-        const a = Lo();
-        const C = ru(a);
-        return lo(new Uint8Array([(() => Math.random())() * 256]["concat"](Array.from(a), Array.from(i), (n => n["slice"](0, 16))(Array.from(new Uint8Array(await Vo([t, n, f]["join"]("!") + "obfiowerehiring" + C)))["concat"](nu)), [3]))["map"](Yo));
+        const k = new Uint8Array(new Uint32Array([f])["buffer"]);
+        const C = Yo();
+        const S = Xc(C);
+        return $o(new Uint8Array([(() => Math.random())() * 256]["concat"](Array.from(C), Array.from(k), (n => n["slice"](0, 16))(Array.from(new Uint8Array(await tc([W, n, f]["join"]("!") + "obfiowerehiring" + S)))["concat"](qc)), [3]))["map"](mc));
       };
     };
   }
