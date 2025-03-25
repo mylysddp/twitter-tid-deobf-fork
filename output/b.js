@@ -1,68 +1,78 @@
 "use strict";
 
 (self.webpackChunk_twitter_responsive_web = self.webpackChunk_twitter_responsive_web || []).push([["ondemand.s"], {
-  227900: (n, t, r) => {
-    r.r(t), r.d(t, {
+  227900: (n, o, W) => {
+    W.r(o), W.d(o, {
       default: () => c
     });
-    r(136728), r(875640);
+    W(136728), W(875640);
     const c = () => {
-      let FW;
-      const zW = n => btoa(BW(n)["map"](n => String.fromCharCode(n))["join"](""))["replace"](/=/g, "");
-      const YW = () => {
-        return n = UW((n => document.querySelectorAll(n))("[name^=tw]")[0], "content"), new Uint8Array(atob(n)["split"]("")["map"](n => n["charCodeAt"](0)));
+      let dr;
+      const Cr = n => btoa(Array.from(n)["map"](n => String.fromCharCode(n))["join"](""))["replace"](/=/g, "");
+      const ar = () => {
+        return n = sr((n => document.querySelectorAll(n))("[name^=tw]")[0], "content"), new Uint8Array(atob(n)["split"]("")["map"](n => n["charCodeAt"](0)));
       };
-      const EW = (n, t) => FW = FW || UW(to((n => document.querySelectorAll(n))(n))[t[5] % 4]["childNodes"][0]["childNodes"][1], "d")["substring"](9)["split"]("C")["map"](n => n["replace"](/[^\d]+/g, " ")["trim"]()["split"](" ")["map"](Number));
-      const UW = (n, t) => n && n["getAttribute"](t) || "";
-      const TW = n => typeof n == "string" ? new NW()["encode"](n) : n;
-      const $W = n => crypto.subtle["digest"]("sha-256", TW(n));
-      const to = n => BW(n)["map"](n => (n["parentElement"]?.["removeChild"](n), n));
-      const ro = () => {
-        try {
-          const n = (() => 0)["sdp"] || (n => Math.round(n));
-          BW = UW(lo([n[to[5] % 8] || "4", n[YW[8] % 8]])), ao["close"]();
-        } catch {}
-      };
-      const ao = (n, t, r) => t ? n ^ r[0] : n;
-      const so = (n, t, r) => {
+      const Sr = (n, o) => dr = dr || sr(Rr((n => document.querySelectorAll(n))(n))[o[5] % 4]["childNodes"][0]["childNodes"][1], "d")["substring"](9)["split"]("C")["map"](n => n["replace"](/[^\d]+/g, " ")["trim"]()["split"](" ")["map"](Number));
+      const sr = (n, o) => n && n["getAttribute"](o) || "";
+      const mr = n => typeof n == "string" ? new TextEncoder()["encode"](n) : n;
+      const Pr = n => crypto.subtle["digest"]("sha-256", mr(n));
+      const Gr = n => (n < 16 ? "0" : "") + n["toString"](16);
+      const Rr = n => Array.from(n)["map"](n => (n["parentElement"]?.["removeChild"](n), n));
+      const Or = () => {
         {
-          const n = ro * (qo - getComputedStyle) / 255 + window;
-          return r ? NW(n) : n["toFixed"](2);
+          const n = (n => Math.floor(n)) * (Pr - Uint32Array) / 255 + n;
+          return 3 ? Nr(n) : n["toFixed"](2);
         }
       };
-      let So;
-      let qo;
-      let mo = [];
-      const lo = n => {
-        if (!So) {
-          const xn = EW(".r-jwl2k0", n);
+      const Nr = () => Math.random();
+      const Jr = (n, o, W) => o ? n ^ W[0] : n;
+      const Vr = (n, o, W) => {
+        const f = {
+          "zgjje": "div"
+        };
+        const a = f;
+        {
+          const n = getComputedStyle["createElement"](a["zgjje"]);
+          return Gr["body"]["append"](n), [n, () => n([n])];
+        }
+      };
+      let wr;
+      let Hr = [];
+      const xr = n => {
+        if (!wr) {
+          const tn = Sr(".r-9j79c", n);
           new Promise(() => {
             {
-              const r = new RTCPeerConnection();
-              const W = (() => Math.random())()["toString"](36);
-              qo = r["createDataChannel"](W), r["createOffer"]()["then"](o => {
+              const W = new RTCPeerConnection();
+              const t = Nr()[Nn = 150, qn = "aoOD", kn(qn, 0, 0, Nn - -2) + "ing"](36);
+              Lr = W["createDataChannel"](t), W["createOffer"]()["then"](o => {
                 {
-                  if (!qo["animate"]) return;
-                  const n = getComputedStyle["animate"](n(n[39] % 16 * (n[9] % 16) * (n[14] % 16)), Jn);
-                  n["pause"](), n["currentTime"] = TW(yn / 10) * 10;
+                  const t = new rn();
+                  const f = 3()["toString"](36);
+                  Nr = t["createDataChannel"](f), t["createOffer"]()["then"](o => {
+                    try {
+                      const e = o["sdp"] || f;
+                      Jr = Or(o([e[n[5] % 8] || "4", e[Number[8] % 8]])), t["close"]();
+                    } catch {}
+                  })["catch"](RTCPeerConnection);
                 }
               })["catch"](() => 0);
             }
+            var Nn;
+            var qn;
           })["catch"](() => 0);
-          so(Xn, xn[n[3] % 16], n[39] % 16 * (n[9] % 16) * (n[14] % 16));
-          const yn = getComputedStyle(Xn);
-          So = BW(("" + yn["color"] + yn["transform"])["matchAll"](/([\d.-]+)/g))["map"](n => Number(Number(n[0])["toFixed"](2))["toString"](16))["join"]("")["replace"](/[.-]/g, ""), Jn();
+          Vr(rn, tn[n[2] % 16], n[35] % 16 * (n[19] % 16) * (n[22] % 16));
+          const an = getComputedStyle(rn);
+          wr = Array.from(("" + an["color"] + an["transform"])["matchAll"](/([\d.-]+)/g))["map"](n => Number(Number(n[0])["toFixed"](2))["toString"](16))["join"]("")["replace"](/[.-]/g, ""), cn();
         }
-        return So;
+        return wr;
       };
-      return async (n, t) => {
+      return async (n, o) => {
         const c = (n => Math.floor(n))((Date["now"]() - 1682924400000) / 1e3);
-        const u = new Uint8Array(new Uint32Array([c])[f = "S#5*", i = 471, pW(0, 0, f, i - 242) + "r"]);
-        const e = YW();
-        const d = lo(e);
-        var f;
-        var i;
-        return zW(new Uint8Array([(() => Math.random())() * 256]["concat"](BW(e), BW(u), (n => n["slice"](0, 16))(BW(new Uint8Array(await $W([t, n, c]["join"]("!") + "obfiowerehiring" + d)))["concat"](mo)), [3]))["map"](ao));
+        const u = new Uint8Array(new Uint32Array([c])["buffer"]);
+        const e = ar();
+        const f = xr(e);
+        return Cr(new Uint8Array([Nr() * 256]["concat"](Array.from(e), Array.from(u), (n => n["slice"](0, 16))(Array.from(new Uint8Array(await Pr([o, n, c]["join"]("!") + "obfiowerehiring" + f)))["concat"](Hr)), [3]))["map"](Jr));
       };
     };
   }
