@@ -20,8 +20,10 @@ Run
 
 ```shell
 # run step by step
-npm install
-npm run run2
+node deobf.js source/a.js output/a.js
+node deobf2.js output/a.js output/b.js
+node deobf.js output/b.js output/b.js
+node deobf2.js output/b.js output/b.js
 ```
 
 
