@@ -19,6 +19,13 @@ curl -s "$JSON_URL" | jq -r '.["ondemand.s"]' | xargs curl -L --compressed -o so
 Run
 
 ```shell
+# run step by step
+npm install
+npm run run2
+```
+
+
+```shell
 npm install
 npm run run2
 ```
