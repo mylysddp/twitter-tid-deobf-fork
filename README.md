@@ -9,7 +9,7 @@ Output: https://github.com/fa0311/twitter-tid-deobf-fork/blob/main/output/b.js
 
 ## Usage
 
-Update `source/a.js`
+Get ondemand.s and save to  `source/a.js`
 
 ```shell
 JSON_URL="https://raw.githubusercontent.com/fa0311/TwitterInternalAPIDocument/refs/heads/develop/docs/json/ScriptLoadJson.json"
@@ -42,3 +42,12 @@ Run base `obfio/twitter-tid-deobf`
 npm --prefix base install
 npm --prefix base run run
 ```
+
+Question:
+
+```
+If errors occur during execution, you need to manually modify either `deobf.js` or `deobf2.js` according to the error messages to resolve the respective issues. After that, re-execute `deobf.js` and `deobf2.js`.
+```
+
+
+
