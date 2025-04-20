@@ -16,8 +16,9 @@ JSON_URL="https://raw.githubusercontent.com/fa0311/TwitterInternalAPIDocument/re
 curl -s "$JSON_URL" | jq -r '.["ondemand.s"]' | xargs curl -L --compressed -o source/a.js
 ```
 
-Run
+Step 1：
 
+Run
 ```shell
 # run step by step
 node deobf.js source/a.js output/a.js
@@ -26,11 +27,14 @@ node deobf.js output/b.js output/b.js
 node deobf2.js output/b.js output/b.js
 ```
 
+OR
 
 ```shell
 npm install
 npm run run2
 ```
+
+Step 2：
 
 Run base `obfio/twitter-tid-deobf`
 
