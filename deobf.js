@@ -417,10 +417,17 @@ const deobfStrings = {
     let binding = path.scope.getBinding(node.callee.name);
     if (!binding) {
       // ! hopefully no binding will always mean that the function in question is `r`???
-      path.replaceWith(
-        t.valueToNode(vm.runInContext(generate(node).code, decryptFuncCtx))
-      );
-      return;
+      try{
+        path.replaceWith(
+          t.valueToNode(vm.runInContext(generate(node).code, decryptFuncCtx))
+        );
+      }
+      catch(e){
+        // do nothing
+      }
+      finally{
+        return;
+      }
     }
     // ! loop until we get to a place where we can't get a binding (aka hopefully the root function)
     while (true) {
