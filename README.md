@@ -14,6 +14,9 @@ Get ondemand.s and save to  `source/a.js`
 ```shell
 JSON_URL="https://raw.githubusercontent.com/fa0311/TwitterInternalAPIDocument/refs/heads/develop/docs/json/ScriptLoadJson.json"
 curl -s "$JSON_URL" | jq -r '.["ondemand.s"]' | xargs curl -L --compressed -o source/a.js
+
+npm install
+
 ```
 
 Step 1：
